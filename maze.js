@@ -16,5 +16,3 @@ function main() {
   
   requestAnimationFrame(tick);
 }
-
-main();
