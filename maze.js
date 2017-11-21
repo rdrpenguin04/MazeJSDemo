@@ -1,11 +1,12 @@
 var gl;
 
 function tick() {
-  
+  gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 }
 
 function main() {
   gl = WebGLUtils.setupWebGL(document.getElementById("mazeCanvas"));
+  gl.clearColor(0,0,0,0);
   window.requestAnimationFrame = window.requestAnimationFrame
     || window.mozRequestAnimationFrame
     || window.webkitRequestAnimationFrame
