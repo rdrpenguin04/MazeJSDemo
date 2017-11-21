@@ -1,9 +1,11 @@
+var gl;
+
 function tick() {
   
 }
 
 function main() {
-  //Insert initialization code here.
+  gl = WebGLUtils.setupWebGL(document.getElementByID("mazeCanvas"));
   window.requestAnimationFrame = window.requestAnimationFrame
     || window.mozRequestAnimationFrame
     || window.webkitRequestAnimationFrame
