@@ -5,7 +5,7 @@ function tick() {
 }
 
 function main() {
-  gl = WebGLUtils.setupWebGL(document.getElementByID("mazeCanvas"));
+  gl = WebGLUtils.setupWebGL(document.getElementById("mazeCanvas"));
   window.requestAnimationFrame = window.requestAnimationFrame
     || window.mozRequestAnimationFrame
     || window.webkitRequestAnimationFrame
