@@ -6,7 +6,17 @@ function tick() {
 
 function main() {
   gl = WebGLUtils.setupWebGL(document.getElementById("mazeCanvas"));
+  gl.enable(gl.DEPTH_TEST);
   gl.clearColor(0,0,0,1);
+  gl.frontFace(gl.CW);
+  gl.cullFace(gl.BACK);
+  gl.enable(gl.CULL_FACE);
+  gl.depthFunc(gl.LESS);
+  gl.depthMask(true);
+  gl.disable(gl.BLEND);
+  
+  
+  
   window.requestAnimationFrame = window.requestAnimationFrame
     || window.mozRequestAnimationFrame
     || window.webkitRequestAnimationFrame
