@@ -1,6 +1,17 @@
 var gl;
+var projection;
+var sensitivity = 0.005;
+var movAmount = 1.0/15;
+
+var keysDown = [];
 
 function tick() {
+  if(!loading) {
+    var centerX = 360;
+    var centerY = 240;
+    if()
+  }
+  
   gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 }
 
@@ -15,7 +26,15 @@ function main() {
   gl.depthMask(true);
   gl.disable(gl.BLEND);
   
+  document.body.onkeydown = function(event) {
+    keysDown[event.keyCode] = 1;
+  }
   
+  document.body.onkeyup = function(event) {
+    keysDown[event.keyCode] = 0;
+  }
+  
+  projection = new Matrix4f(1.221730476393, 1.5, 0.0001, 1000);
   
   window.requestAnimationFrame = window.requestAnimationFrame
     || window.mozRequestAnimationFrame
